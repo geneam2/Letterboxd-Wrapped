@@ -1,0 +1,45 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Film {
+  tmdb_id          Int    @id @unique
+  title            String
+  release_date     DateTime
+  vote_average     Float
+  vote_count       Int
+  adult            Boolean
+  overview         String
+  duration         Int
+  revenue          Float
+  tagline          String
+  genre_list       Genre[]
+  cast_list        Cast[]
+  director_list    Director[]
+  weighted_rating  Float
+}
+
+model Genre {
+  id               Int       @id @unique
+  name             String
+  films            Film[]    
+}
+
+model Cast {
+  id               Int       @id @unique
+  name             String
+  films            Film[]    
+}
+
+model Director {
+  id               Int       @id @unique
+  name             String
+  films            Film[]    
+}
+
