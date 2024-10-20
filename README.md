@@ -1,16 +1,6 @@
-# Letterboxd Wrapped (last updated 12/7/23)
+# Letterboxd Wrapped (last updated 10/20/24)
 
 # Designed by Alexis Jan Tuvilla [[portfolio]](https://alexisjantuvilla.com/)
-
-# How to Run (for Future-Me)
-
-```bash
-# in one terminal
-npm run start
-# in another terminal
-source ./venv/bin/activate
-python3 server.py
-```
 
 # Tech Stack
 
